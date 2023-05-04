@@ -1,4 +1,4 @@
-# sqlite_scraper
+# SQLite_scraper
 Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 - Only for use on extractions of SQLite DBs pulled from KaiOS based cell phones 
