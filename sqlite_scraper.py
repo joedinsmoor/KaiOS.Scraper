@@ -2,6 +2,7 @@ import os
 import sqlite3
 import time
 import string
+import re
 
 
 #Import extracted SQLite db
@@ -23,5 +24,6 @@ valid_chars = string.printable
 #Decode and remove extraneous hex data, leaving only ascii characters
 for row in cur.execute("SELECT data FROM object_data"):
     row_str = str(row)
-    row_decoded = ''.join(i for i in row_str if i in valid_chars)
+    row_str_decoded = bytes(row_str, "utf-8").decode("unicode_escape")
+    row_decoded = re.sub('r\\\\x[0-9a-fA-F]{2}', "", row_str_decoded)
     print(row_decoded)
