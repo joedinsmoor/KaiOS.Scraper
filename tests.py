@@ -14,8 +14,8 @@ def sqlite_db():
                   email TEXT)""")
 
     # Insert some data
-    c.execute("INSERT INTO users VALUES (1, 'Alice', 'alice@example.com')")
-    c.execute("INSERT INTO users VALUES (2, 'Bob', 'bob@example.com')")
+    c.execute("INSERT INTO object_data VALUES (1, 'Alice', 'alice@example.com')")
+    c.execute("INSERT INTO object_data VALUES (2, 'Bob', 'bob@example.com')")
 
     # Commit the changes
     conn.commit()
@@ -29,7 +29,7 @@ def sqlite_db():
 def test_my_function(sqlite_db):
     # Use the connection object to run queries
     c = sqlite_db.cursor()
-    c.execute("SELECT * FROM users")
+    c.execute("SELECT * FROM object_data")
     rows = c.fetchall()
 
     # Assert that the data is what we expect
