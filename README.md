@@ -8,3 +8,4 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 *Future Features*
 
 - Removal of all none ascii characters
+- Ability to handle images, and recover them
