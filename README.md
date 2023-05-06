@@ -13,3 +13,4 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 *Future Features*
 
 - Ability to handle images, and recover them
+- Ability to eventually handle all SQLite DBs, not just extracted from KaiOS
