@@ -4,6 +4,8 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Only for use on extractions of SQLite DBs pulled from KaiOS based cell phones 
 - Pulls hex data from object_data table of imported db
 - Removes extraneous data from row, and prints in human readable format
+- Exports scraped phone numbers to 'phone_numbers.log'
+- Logs output to 'run.log'
 
 *Coming Soon*
 
