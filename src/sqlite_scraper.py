@@ -7,17 +7,43 @@ from decoder import decode
 
 #Import extracted SQLite db
 filename = input_file()
+if filename == "":
+    print("No file entered.")
+    filename = input_file()
+
+tablename = input("Enter name of table to parse:")
+
 conn = sqlite3.connect(filename)
 cur = conn.cursor()
 
 #Navigate to appropriate table and row
-res = cur.execute("SELECT name FROM sqlite_master WHERE name='object_data'")
-res.fetchall()
+try:
+    if tablename == "":
+        res = cur.execute("SELECT name FROM sqlite_master WHERE name='object_data'")
+        res.fetchall()
 
-#Set character validity for decoding
-valid_chars = string.printable
+    else:
+        res = cur.execute("SELECT name FROM sqlite_master WHERE name=tablename")
 
-#Decode and remove extraneous hex data, leaving only ascii characters
-decode(cur)
+    #Set character validity for decoding
+    valid_chars = string.printable
+
+    #Decode and remove extraneous hex data, leaving only ascii characters
+    decode(cur)
+
+except sqlite3.Error as error:
+    print("Failed to read data from sqlite table", error)
+
+finally:
+    if conn:
+        conn.close()
+        print("SQLite Connection Closed. ")
+
+
+
+    
 
 #images = handle_photo(cur)
+
+
+
