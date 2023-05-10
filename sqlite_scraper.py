@@ -6,14 +6,15 @@ sys.path.append('./src')
 from src.importer import input_file
 from src.image_handler import handle_photo
 from src.decoder import decode
+from src.logger import scraper_log
 
 #Import extracted SQLite db
 filename = input_file()
-if filename == "":
-    print("No file entered.")
+while filename == "":
+    print("No file entered.\nPress ctrl+c to exit.")
     filename = input_file()
 
-tablename = input("Enter name of table to parse:")
+tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
 conn = sqlite3.connect(filename)
 cur = conn.cursor()
@@ -34,7 +35,10 @@ try:
     decode(cur)
 
 except sqlite3.Error as error:
-    print("Failed to read data from sqlite table", error)
+    print("Failed to read data from sqlite table: Error:", error)
+    error_text = "Failed to read data from sqlite table: Error:".format(str(error)) 
+    log_error = 1
+    scraper_log(error_text, log_error)
 
 finally:
     if conn:
