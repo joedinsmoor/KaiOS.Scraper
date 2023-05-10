@@ -9,7 +9,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 
 *Installation*
-- run `python pip install -r requirements`
+- run `python pip install -r requirements.txt`
 - all dependencies are now installed, run with `python3 sqlite_scraper.py`
 
 *Coming Soon*
