@@ -44,7 +44,7 @@ finally:
 
 
     
-
+#Future Feature - handles photos using 'image_handler.py'
 #images = handle_photo(cur)
 
 
