@@ -37,7 +37,7 @@ except sqlite3.Error as error:
 finally:
     if conn:
         conn.close()
-        print("SQLite Connection Closed. ")
+        print("\nSQLite Connection Closed. \nLog saved in 'run.log'\n")
 
 
 
