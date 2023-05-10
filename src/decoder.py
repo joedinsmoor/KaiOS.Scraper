@@ -1,7 +1,7 @@
 import re
 import sqlite3
 import string
-from logger import scraper_log, phone_numbers
+from logger import *
 
 
 #Decode and remove extraneous hex data, leaving only ascii characters

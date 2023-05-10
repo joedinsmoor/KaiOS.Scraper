@@ -1,9 +1,11 @@
 import os
 import sqlite3
 import string
-from importer import input_file
-from image_handler import handle_photo
-from decoder import decode
+import sys
+sys.path.append('./src')
+from src.importer import input_file
+from src.image_handler import handle_photo
+from src.decoder import decode
 
 #Import extracted SQLite db
 filename = input_file()
