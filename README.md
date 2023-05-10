@@ -7,6 +7,11 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Exports scraped phone numbers to 'phone_numbers.log'
 - Logs output to 'run.log'
 
+
+*Installation*
+- run ```markdown pip install -r requirements
+- all dependencies are now installed, run with 'python3 sqlite_scraper.py'
+
 *Coming Soon*
 
 - Efficiency Optimizations
