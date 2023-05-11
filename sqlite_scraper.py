@@ -2,6 +2,7 @@ import os
 import sqlite3
 import string
 import sys
+from os.path import exists
 sys.path.append('./src')
 from src.importer import input_file
 from src.image_handler import handle_photo
@@ -46,6 +47,10 @@ finally:
     if conn:
         conn.close()
         print("\nSQLite Connection Closed. \nLog saved in 'run.log'\n")
+        if exists("phone_numbers.csv"):
+                print("Phone Numbers Found! Output in 'phone_numbers.csv'")
+        if exists("timestamps.log"):
+                print("Timestamps Gathered! Timestamps in 'timestamps.log'")
 
 
 
