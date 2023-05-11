@@ -4,7 +4,7 @@ import sqlite3
 
 
 def handle_photo(cur):
-    #Carve any images that exist in SQLite db - nonfunctional as of 5/6
+    #Carve any images that exist in SQLite db - nonfunctional as of 5/11
     cur.execute("SELECT data FROM object_data")
     res = cur.fetchone()
     image_data = res[0]
