@@ -9,7 +9,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 
 *Installation*
-- run `python pip install -r requirements`
+- run `python3 pip install -r requirements.txt`
 - all dependencies are now installed, run with `python3 sqlite_scraper.py`
 
 *Coming Soon*
@@ -22,3 +22,5 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 - Ability to handle images, and recover them
 - Ability to eventually handle all SQLite DBs, not just extracted from KaiOS
+
+Feel free to dm me on twitter [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/joedinsmoor.svg?style=social&label=Follow%20%40joedinsmoor)](https://twitter.com/joedinsmoor) with any questions or feature requests!
