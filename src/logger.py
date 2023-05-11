@@ -20,7 +20,7 @@ def phone_numbers(str):
         pfile.close()
 
 def timestamper_log(str):
-    file = open("timestamps.log")
+    file = open("timestamps.log", "w")
     file.write(str)
     file.write("\n")
     file.close()
