@@ -8,11 +8,11 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Logs output to 'run.log'
 
 
-*Installation*
+**Installation**
 - run `python3 pip install -r requirements.txt`
 - all dependencies are now installed, run with `python3 sqlite_scraper.py`
 
-*Coming Soon*
+**Coming Soon**
 
 - Efficiency Optimizations
 - Setup and installation configurations
