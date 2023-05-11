@@ -7,6 +7,7 @@ from src.importer import input_file
 from src.image_handler import handle_photo
 from src.decoder import decode
 from src.logger import scraper_log
+from src.timestamper import time_scrape
 
 #Import extracted SQLite db
 filename = input_file()
@@ -33,6 +34,7 @@ try:
 
     #Decode and remove extraneous hex data, leaving only ascii characters
     decode(cur)
+    time_scrape(cur)
 
 except sqlite3.Error as error:
     print("Failed to read data from sqlite table: Error:", error)

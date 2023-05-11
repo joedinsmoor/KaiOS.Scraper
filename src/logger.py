@@ -18,3 +18,9 @@ def phone_numbers(str):
         writer = csv.writer(pfile)
         writer.writerow(str)
         pfile.close()
+
+def timestamper_log(str):
+    file = open("timestamps.log")
+    file.write(str)
+    file.write("\n")
+    file.close()
