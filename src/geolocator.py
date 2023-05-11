@@ -16,6 +16,9 @@ geo = Nominatim(user_agent="sqlite_scraper")
 def geolocation(str):
     '''
     - Takes in string and searches for coordinates in latitude and longitude
-    - sends to google earth API to create a heatmap or web to show locations at which certain events transpired
+    - uses geopy library with Nominatim to determine locations using given coordinates and plots on a map using tkinter library
     - Links to timestamp log so that if a location is clicked, a timestamp pops up with information on the event
     '''
+    #coords = "x, y"
+    #location = geo.reverse(coords)
+    #address = location.raw['address']
