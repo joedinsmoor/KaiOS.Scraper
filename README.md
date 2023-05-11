@@ -16,7 +16,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 - Efficiency Optimizations
 - Setup and installation configurations
-- Export cell phone numbers to csv, as well as messages between contact and owner of phone number
+- Export cell phone numbers to csv, as well as messages between contact and owner of phone number - (Works, but adds each digit of phone number to its own row)
 
 *Future Features*
 
