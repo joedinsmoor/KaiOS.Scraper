@@ -6,6 +6,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Removes extraneous data from row, and prints in human readable format
 - Exports scraped phone numbers to 'phone_numbers.csv'
 - Logs output to 'run.log'
+- Exports phone numbers to csv file (thanks to @phoenixrising1800)
 
 
 **Installation**
@@ -16,7 +17,6 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 
 - Efficiency Optimizations
 - Setup and installation configurations
-- Export cell phone numbers to csv, as well as messages between contact and owner of phone number - (Works, but adds each digit of phone number to its own row)
 - Geolocation tagging with relevant connections to event logs using Google Earth
 - Timestamp recording with events tied to timestamps
 
