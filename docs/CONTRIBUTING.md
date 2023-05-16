@@ -1,11 +1,11 @@
 **Basic Contribution Guidelines:**
 
-- If adding a new module, please be sure to include the below header in a comment block with the correct information filled out.
+- If adding a new module, please be sure to include the below header in a comment block with the correct information filled out.\
 
-`-----------------------------------------------------------------`
-`#"Brief module description goes here"`
+`-----------------------------------------------------------------`\
+`#"Brief module description goes here"`\
 
-`#Written by: "Your name"`
+`#Written by: "Your name"`\
 
-`#github: "Your github handle"`
+`#github: "Your github handle"`\
 `-----------------------------------------------------------------`
