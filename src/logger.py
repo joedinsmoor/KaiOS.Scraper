@@ -16,7 +16,7 @@ def scraper_log(str, error=0, flag=0):
 def phone_numbers(str):
         pfile = open("phone_numbers.csv", "w")
         writer = csv.writer(pfile)
-        writer.writerow(str)
+        writer.writerow([str])
         pfile.close()
 
 def timestamper_log(str):
