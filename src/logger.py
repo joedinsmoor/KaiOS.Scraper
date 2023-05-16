@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------
+# Logging for different datatypes scraped from sqlite db binaries
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
+
+
 import csv
 
 

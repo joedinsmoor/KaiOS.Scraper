@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------
+# Scrape image metadata from sqlite db binaries
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
+
+
 from PIL import Image
 import io
 import sqlite3

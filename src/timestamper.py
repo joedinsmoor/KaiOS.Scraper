@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------
+# Strip timestamps from sqlite db binaries
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
+
+
 import datetime
 import time
 import os

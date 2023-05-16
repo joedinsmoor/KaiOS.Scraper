@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------
+# Scrape geolocation data from sqlite binaries
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
+
+
 import datetime
 import time
 import os
