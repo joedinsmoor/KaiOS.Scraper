@@ -4,6 +4,8 @@
 
 '''-----------------------------------------------------------------
 "Brief module description goes here"
+
 Written by: "Your name"
+
 github: "Your github handle"
 -----------------------------------------------------------------'''
