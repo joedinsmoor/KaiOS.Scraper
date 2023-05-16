@@ -6,7 +6,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Removes extraneous data from row, and prints in human readable format
 - Exports scraped phone numbers to 'phone_numbers.csv'
 - Logs output to 'run.log'
-- Exports phone numbers to csv file (thanks to [@phoenixrising1800])
+- Exports phone numbers to csv file (thanks to [@phoenixrising1800](https://github.com/phoenixrising1800))
 
 
 **Installation**
