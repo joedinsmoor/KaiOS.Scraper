@@ -19,6 +19,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Setup and installation configurations
 - Geolocation tagging with relevant connections to event logs using Google Earth
 - Timestamp recording with events tied to timestamps
+- Full directory parsing of all SQLite dbs
 
 *Future Features*
 
