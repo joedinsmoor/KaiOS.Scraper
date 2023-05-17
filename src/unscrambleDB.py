@@ -1,6 +1,10 @@
-# -----------------------------------------------------------------
-# Deciper the name of SQLite database stored on KaiOS 
-# -----------------------------------------------------------------
+#-----------------------------------------------------------------
+# Deciper the name of SQLite database stored on KaiOS filesystem
+
+# Written by: Nixy
+
+#github: @phoenixrising1800
+#-----------------------------------------------------------------
 import re
 from string import digits
 
