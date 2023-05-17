@@ -4,7 +4,7 @@ import string
 import sys
 from os.path import exists
 sys.path.append('./src')
-from src.importer import unscramble
+from src.unscrambleDB import unscramble
 from src.importer import input_file
 from src.image_handler import handle_photo
 from src.decoder import decode
