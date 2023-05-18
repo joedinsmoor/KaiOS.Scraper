@@ -1,36 +1,23 @@
-import os
 import sqlite3
+import os
 import string
 import sys
-import glob
 from os.path import exists
 sys.path.append('./src')
 from src.unscrambleDB import unscramble
-from src.importer import input_file
 from src.image_handler import handle_photo
 from src.decoder import decode
 from src.logger import scraper_log
 from src.timestamper import time_scrape
 
 
-menu = input("Enter 1 to scrape a single db, Enter 2 to scrape a full directory of sqlite dbs: ")
-
-fileList = []
-n = 0
-
-if (menu == '1'):
-    #Import extracted SQLite db
-    filename = input_file()
-    while filename == "":
-        print("No file entered.\nPress ctrl+c to exit.")
-        filename = input_file()
-
+def dirScraper(file):
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
-    unscrambled = unscramble(filename)
+    unscrambled = unscramble(file)
 
 
-    conn = sqlite3.connect(filename)
+    conn = sqlite3.connect(file)
     cur = conn.cursor()
     #Navigate to appropriate table and row
     try:
@@ -62,32 +49,4 @@ if (menu == '1'):
                     print("Phone Numbers Found! Output in 'phone_numbers.csv'")
             if exists("timestamps.log"):
                     print("Timestamps Gathered! Timestamps in 'timestamps.log'")
-
-elif (menu == '2'):
-    #import all filenames to list, parse all dbs in parallel using Threading
-    dir = input("enter directory to scrape: ")
-    os.chdir(dir)
-    print(dir)
-    for file in glob.glob(".sqlite"):
-        print(file)
-        dirScraper(file)
-        fileList.append(file)
-        n += 1
-    
-
-else:
-    print("------------menu option invalid------------")
-    exit()
-
-
-
-
-
-
-
-    
-#Future Feature - handles photos using 'image_handler.py'
-#images = handle_photo(cur)
-
-
 
