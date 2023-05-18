@@ -4,6 +4,7 @@ import string
 import sys
 import glob
 from os.path import exists
+from pathlib import Path
 sys.path.append('./src')
 from src.unscrambleDB import unscramble
 from src.importer import input_file
@@ -28,7 +29,11 @@ if (menu == '1'):
 
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
-    unscrambled = unscramble(filename)
+
+    p = Path(filename)
+    str(p.parent)
+
+    unscrambled = unscramble(p.name)
 
 
     conn = sqlite3.connect(filename)
