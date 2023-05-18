@@ -11,6 +11,7 @@ from src.logger import scraper_log
 from src.timestamper import time_scrape
 
 
+
 def dirScraper(file):
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 

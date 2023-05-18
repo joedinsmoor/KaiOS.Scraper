@@ -11,6 +11,7 @@ from src.image_handler import handle_photo
 from src.decoder import decode
 from src.logger import scraper_log
 from src.timestamper import time_scrape
+from src.dirScrape import *
 
 
 menu = input("Enter 1 to scrape a single db, Enter 2 to scrape a full directory of sqlite dbs: ")
