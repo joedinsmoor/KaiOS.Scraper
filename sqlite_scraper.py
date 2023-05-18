@@ -72,12 +72,15 @@ elif (menu == '2'):
     #import all filenames to list, parse all dbs in parallel using Threading
     dir = input("enter directory to scrape: ")
     os.chdir(dir)
-    print(dir)
-    for file in glob.glob(".sqlite"):
-        print(file)
-        dirScraper(file)
-        fileList.append(file)
-        n += 1
+    dir_list = os.listdir(dir)
+    print(dir_list)
+    n = len(dir_list)
+    for i in range(n):
+        if(dir_list[i].endswith(".sqlite")):
+            dirScraper(dir_list[i])
+        else:
+            i+=1
+
     
 
 else:

@@ -2,6 +2,7 @@ import sqlite3
 import os
 import string
 import sys
+from pathlib import Path
 from os.path import exists
 sys.path.append('./src')
 from src.unscrambleDB import unscramble
@@ -12,13 +13,15 @@ from src.timestamper import time_scrape
 
 
 
-def dirScraper(file):
+def dirScraper(filename):
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
-    unscrambled = unscramble(file)
+
+    p = Path(filename)
+    unscrambled = unscramble(p.name)
 
 
-    conn = sqlite3.connect(file)
+    conn = sqlite3.connect(filename)
     cur = conn.cursor()
     #Navigate to appropriate table and row
     try:
