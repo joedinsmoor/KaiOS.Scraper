@@ -10,7 +10,6 @@ import sqlite3
 import string
 from logger import *
 from string import digits
-from nameDecoder import *
 
 '''
 - Decode and remove extraneous hex data, leaving only ascii characters
@@ -31,7 +30,4 @@ def decode(cur):
      print(print_me)
      scraper_log(print_me)
 
-def decodeName(text):
-  if valid_input(text):
-    decoded = main(text)
-    return decoded
+

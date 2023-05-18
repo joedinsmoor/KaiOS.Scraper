@@ -19,6 +19,9 @@ while filename == "":
 
 tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
+unscrambled = unscramble(filename)
+
+
 conn = sqlite3.connect(filename)
 cur = conn.cursor()
 
