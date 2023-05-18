@@ -31,7 +31,6 @@ if (menu == '1'):
 
 
     p = Path(filename)
-    str(p.parent)
 
     unscrambled = unscramble(p.name)
 
