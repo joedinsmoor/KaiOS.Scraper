@@ -18,13 +18,13 @@ def handle_photo(cur):
     jpg_byte_end = b'\xff\xd9'
     image_binary = bytearray()
 
-    start = res.find(jpg_byte_start)
+    start = jpg_byte_start in res
     if start == -1:
         print("Could not find .jpg file within Sqlite db")
         return
-    end = res.find(jpg_byte_end, start) + len(jpg_byte_end)
+    end = jpg_byte_end in res
 
-    image_binary += res[start:end]
+    image_binary.extend(res[start:end])
     print(f"Size: {end - start} bytes")
 
     with open(f'extracted_image.jpg', 'wb') as f:
