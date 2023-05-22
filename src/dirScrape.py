@@ -15,6 +15,7 @@ from src.image_handler import handle_photo
 from src.decoder import decode
 from src.logger import scraper_log
 from src.timestamper import time_scrape
+from src.image_handler import handle_photo
 
 
 
@@ -39,7 +40,7 @@ def dirScraper(filename):
 
         #Set character validity for decoding
         valid_chars = string.printable
-
+        f = handle_photo(cur)
         #Decode and remove extraneous hex data, leaving only ascii characters
         decode(cur)
         time_scrape(cur)

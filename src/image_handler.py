@@ -19,7 +19,7 @@ def handle_photo(cur):
     image_binary = bytearray()
 
     start = jpg_byte_start in res
-    if start == -1:
+    if start == '-1':
         print("Could not find .jpg file within Sqlite db")
         return
     end = jpg_byte_end in res
@@ -29,5 +29,6 @@ def handle_photo(cur):
 
     with open(f'extracted_image.jpg', 'wb') as f:
         f.write(image_binary)
+    return f
     
     
