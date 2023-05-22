@@ -1,3 +1,8 @@
+# -----------------------------------------------------------------
+# Scrapes full directories of SQLite dbs
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
 import sqlite3
 import os
 import string
