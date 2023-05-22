@@ -48,7 +48,7 @@ if (menu == '1'):
 
         #Set character validity for decoding
         valid_chars = string.printable
-
+        image = handle_photo(cur)
         #Decode and remove extraneous hex data, leaving only ascii characters
         decode(cur)
         time_scrape(cur)
@@ -89,13 +89,6 @@ else:
 
 
 
-
-
-
-
-    
-#Future Feature - handles photos using 'image_handler.py'
-#images = handle_photo(cur)
 
 
 
