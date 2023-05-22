@@ -27,7 +27,6 @@ def decode(cur):
      print_me = row_decoded.encode('ascii', 'ignore').decode('ascii')
      for i in re.findall(r'[\+\(]?[1-9][0-9 .\-(\)]{8,}[0-9]', print_me):
        phone_numbers(i)
-     print(print_me)
      scraper_log(print_me)
 
 
