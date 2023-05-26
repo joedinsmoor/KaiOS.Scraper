@@ -19,7 +19,8 @@ from src.image_handler import handle_photo
 
 
 
-def dirScraper(filename, dirflag = 1):
+def dirScraper(filename, dirflag):
+    #Scrapes full directory of SQLite dbs
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
     dirflag = 1

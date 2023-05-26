@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------
-# Scrape geolocation data from sqlite binaries
+# Scrape geolocation data from sqlite binaries - nonfunctional as of 5/26/23
 # Written by: Joe Dinsmoor
 # github: @joedinsmoor
 # -----------------------------------------------------------------
