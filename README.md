@@ -8,6 +8,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Logs output to 'run.log'
 - Exports phone numbers to csv file (thanks to [@phoenixrising1800](https://github.com/phoenixrising1800))
 - Unscrambles scrambled db filenames for user friendliness
+- Full directory parsing of all SQLite dbs
 
 
 **Installation**
@@ -20,7 +21,7 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Setup and installation configurations
 - Geolocation tagging with relevant connections to event logs using Google Earth
 - Timestamp recording with events tied to timestamps
-- Full directory parsing of all SQLite dbs
+
 
 *Future Features*
 
