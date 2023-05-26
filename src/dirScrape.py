@@ -25,6 +25,7 @@ def dirScraper(filename, dirflag = 1):
     dirflag = 1
     p = Path(filename)
     unscrambled = unscramble(p.name)
+    os.makedirs(unscrambled) #Create directory for current sqlite DB
 
 
     conn = sqlite3.connect(filename)
