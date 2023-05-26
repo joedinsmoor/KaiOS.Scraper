@@ -45,7 +45,7 @@ def unscramble(text: str) -> str:
     while (newText.__contains__("%2F")):
         newText = newText.replace("%2F", "/")
 
-    print("\nDecoded result:\n\t" + newText)
+    print("Decoded database name: " + newText)
     return newText 
 
 if __name__ == '__main__':
