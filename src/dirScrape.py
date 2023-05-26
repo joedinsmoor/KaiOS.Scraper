@@ -22,7 +22,7 @@ from src.image_handler import handle_photo
 def dirScraper(filename, dirflag = 1):
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
-
+    dirflag = 1
     p = Path(filename)
     unscrambled = unscramble(p.name)
 
@@ -40,9 +40,9 @@ def dirScraper(filename, dirflag = 1):
 
         #Set character validity for decoding
         valid_chars = string.printable
-        f = handle_photo(cur)
+        f = handle_photo(cur, dirflag)
         #Decode and remove extraneous hex data, leaving only ascii characters
-        decode(cur)
+        decode(cur, dirflag, unscrambled)
         time_scrape(cur)
 
     except sqlite3.Error as error:
