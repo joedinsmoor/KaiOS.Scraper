@@ -19,7 +19,7 @@ from src.image_handler import handle_photo
 
 
 
-def dirScraper(filename):
+def dirScraper(filename, dirflag = 1):
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
 

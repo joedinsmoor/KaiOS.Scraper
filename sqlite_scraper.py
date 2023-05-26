@@ -70,6 +70,9 @@ if (menu == '1'):
 
 elif (menu == '2'):
     #import all filenames to list, parse all dbs in parallel using Threading
+
+    dirflag = 1
+
     dir = input("enter directory to scrape: ")
     os.chdir(dir)
     dir_list = os.listdir(dir)
@@ -77,7 +80,7 @@ elif (menu == '2'):
     n = len(dir_list)
     for i in range(n):
         if(dir_list[i].endswith(".sqlite")):
-            dirScraper(dir_list[i])
+            dirScraper(dir_list[i], dirflag)
         else:
             i+=1
 
