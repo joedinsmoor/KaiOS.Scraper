@@ -10,7 +10,7 @@ import io
 import sqlite3
 
 
-def handle_photo(cur, dir = 0):
+def handle_photo(cur, dirflag = 0):
     #Carve any images that exist in SQLite db - nonfunctional as of 5/11
     cur.execute("SELECT data FROM object_data")
     res = cur.fetchall()

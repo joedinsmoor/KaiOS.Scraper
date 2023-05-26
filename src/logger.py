@@ -8,7 +8,7 @@
 import csv
 
 
-def scraper_log(str, error=0, flag=0, dir = 0):
+def scraper_log(str, error=0, flag=0, dirflag = 0):
     if not flag:
         file = open("run.log", "w")
         file.write("\n")
@@ -20,7 +20,7 @@ def scraper_log(str, error=0, flag=0, dir = 0):
         file.write(error)
         file.close()
 
-def phone_numbers(str, dir = 0):
+def phone_numbers(str, dirflag = 0):
         pfile = open("phone_numbers.csv", "w")
         writer = csv.writer(pfile)
         writer.writerow([str])
