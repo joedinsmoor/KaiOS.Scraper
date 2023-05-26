@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------
-# Strip timestamps from sqlite db binaries
+# Strip timestamps from sqlite db binaries - under development as of 5/26/23
 # Written by: Joe Dinsmoor
 # github: @joedinsmoor
 # -----------------------------------------------------------------
