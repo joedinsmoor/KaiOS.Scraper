@@ -1,4 +1,5 @@
 import os
+import sqlite3
 
 def input_file():
     filename = input("enter path to sqlite db: ")
