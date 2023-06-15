@@ -11,6 +11,12 @@ Custom SQLite Scraper for use with KaiOS SQLite extractions
 - Full directory parsing of all SQLite dbs
 
 
+**OS Support**
+- Windows
+- MacOS (Apple Silicon and Intel)
+  - Apple Silicon struggles with PIL, will be fixed soon
+- Linux
+
 **Installation**
 - run `python3 pip install -r requirements.txt`
 - all dependencies are now installed, run with `python3 sqlite_scraper.py`
