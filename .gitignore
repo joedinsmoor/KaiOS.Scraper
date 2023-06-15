@@ -1,3 +1,5 @@
 phone_numbers.csv
 run.log
 extracted_image.jpg
+__init__.py
+__pycache__
