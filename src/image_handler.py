@@ -5,7 +5,7 @@
 # -----------------------------------------------------------------
 
 
-from PIL import Image
+#from PIL import Image
 import io
 import sqlite3
 

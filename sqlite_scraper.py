@@ -9,7 +9,7 @@ from os.path import exists
 from pathlib import Path
 sys.path.append('./src')
 from src.unscrambleDB import unscramble
-from src.importer import input_file
+from src.importer import *
 from src.image_handler import handle_photo
 from src.decoder import decode
 from src.logger import scraper_log
@@ -36,8 +36,7 @@ if (menu == '1'):
 
     unscrambled = unscramble(p.name)
 
-
-    conn = sqlite3.connect(filename)
+    conn = open_sqlite_db_readonly(filename)
     cur = conn.cursor()
     #Navigate to appropriate table and row
     try:
