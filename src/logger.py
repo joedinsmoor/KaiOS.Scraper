@@ -27,7 +27,7 @@ def scraper_log(str, error=0, flag=0, dirflag = 0, dirname =""):
         file.write(error)
         file.close()
 
-def phone_numbers(str, dirflag = 0, dirname = ""):
+def phone_numbers(str,  dirname, dirflag = 0):
         if dirflag:
             filename = dirname + "_phone_numbers.csv"
             pfile = open(filename, "w")
