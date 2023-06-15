@@ -16,6 +16,7 @@ from src.decoder import decode
 from src.logger import scraper_log
 from src.timestamper import time_scrape
 from src.image_handler import handle_photo
+from src.importer import *
 
 
 
@@ -29,7 +30,7 @@ def dirScraper(filename, dirflag):
     os.makedirs(unscrambled) #Create directory for current sqlite DB
 
 
-    conn = sqlite3.connect(filename)
+    conn = open_sqlite_db_readonly(filename)
     cur = conn.cursor()
     #Navigate to appropriate table and row
     try:
