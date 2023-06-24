@@ -39,6 +39,8 @@ jobs:
       run: |
         pytest tests/tests.py
     - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
       env: 
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      run:
+        gcov-9 -o . `find . -name '*py'`
+        bash <(curl -s https://codecov.io/bash)
