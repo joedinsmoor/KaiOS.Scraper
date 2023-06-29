@@ -75,20 +75,21 @@ elif (menu == '2'):
     dirflag = 1
 
     dir = input("enter directory to scrape: ")
+    tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
     os.chdir(dir)
     dir_list = os.listdir(dir)
     print(dir_list)
     n = len(dir_list)
     for i in range(n):
         if(dir_list[i].endswith(".sqlite")):
-            dirScraper(dir_list[i], dirflag)
+            dirScraper(dir_list[i], dirflag, tablename)
         else:
             i+=1
 
     
 
 else:
-    print("------------menu option invalid------------")
+    print("------------menu option invalid------------\n")
     exit()
 
 
