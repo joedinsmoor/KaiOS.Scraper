@@ -82,7 +82,7 @@ elif (menu == '2'):
     n = len(dir_list)
     for i in range(n):
         if(dir_list[i].endswith(".sqlite")):
-            dirScraper(dir_list[i], dirflag)
+            dirScraper(dir_list[i], dirflag, tablename)
         else:
             i+=1
 
