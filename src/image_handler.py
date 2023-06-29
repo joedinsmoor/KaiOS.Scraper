@@ -25,7 +25,7 @@ def handle_photo(cur, dirflag = 0, dirname = ""):
     end = jpg_byte_end in res
 
     image_binary.extend(res[start:end])
-    print(f"Size: {end - start} bytes")
+    #print(f"Size: {end - start} bytes")
 
     with open(f'extracted_image.jpg', 'wb') as f:
         f.write(image_binary)
