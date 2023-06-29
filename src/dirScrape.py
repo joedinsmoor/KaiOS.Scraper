@@ -20,9 +20,9 @@ from src.importer import *
 
 
 
-def dirScraper(filename, dirflag):
+def dirScraper(filename, dirflag, tablename):
     #Scrapes full directory of SQLite dbs
-    tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
+
 
     dirflag = 1
     p = Path(filename)

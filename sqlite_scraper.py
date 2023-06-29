@@ -75,6 +75,7 @@ elif (menu == '2'):
     dirflag = 1
 
     dir = input("enter directory to scrape: ")
+    tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
     os.chdir(dir)
     dir_list = os.listdir(dir)
     print(dir_list)
@@ -88,7 +89,7 @@ elif (menu == '2'):
     
 
 else:
-    print("------------menu option invalid------------")
+    print("------------menu option invalid------------\n")
     exit()
 
 
