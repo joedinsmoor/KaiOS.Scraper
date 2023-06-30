@@ -30,7 +30,7 @@ def scraper_log(str, error_text="", flag=False, dirflag = 0, dirname =""):
         else:
             file = open("error.log", "w")
             file.write(str)
-           # file.write(error_text)
+            #file.write(error_text)
             file.close()
 
 def phone_numbers(str,  dirname, dirflag = 0):
@@ -47,8 +47,14 @@ def phone_numbers(str,  dirname, dirflag = 0):
             writer.writerow([str])
             pfile.close()
 
-def timestamper_log(str):
-    file = open("timestamps.log", "w")
-    file.write(str)
-    file.write("\n")
-    file.close()
+def timestamper_log(str, dirflag = 0):
+    if dirflag:
+        file = open("timestamps.log", "w")
+        file.write(str)
+        file.write("\n")
+        file.close()
+    else:
+        file = open("timestamps.log", "w")
+        file.write(str)
+        file.write("\n")
+        file.close()
