@@ -8,9 +8,10 @@
 #from PIL import Image
 import io
 import sqlite3
+import os
 
 
-def handle_photo(cur, dirflag = 0, dirname = ""):
+def handle_photo(cur, unscrambled, dirflag = 0):
     #Carve any images that exist in SQLite db - nonfunctional as of 5/11
     cur.execute("SELECT data FROM object_data")
     res = cur.fetchall()
@@ -27,8 +28,14 @@ def handle_photo(cur, dirflag = 0, dirname = ""):
     image_binary.extend(res[start:end])
     #print(f"Size: {end - start} bytes")
 
-    with open(f'extracted_image.jpg', 'wb') as f:
-        f.write(image_binary)
-    return f
+    if dirflag:
+        os.changedir(unscrambled)
+        with open(f'extracted_image.jpg', 'wb') as f:
+            f.write(image_binary)
+        return f
+    else:
+        with open(f'extracted_image.jpg', 'wb') as f:
+            f.write(image_binary)
+        return f
     
     

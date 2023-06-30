@@ -7,22 +7,22 @@
 
 import csv
 import os
+import logging
 
 
-def scraper_log(str, error_text="", flag=False, dirflag = 0, dirname =""):
+def scraper_log(str, unscrambled, error_text="", flag=False, dirflag = 0):
+    logging.basicConfig(level=logging.DEBUG, filename='run.log', format='%(asctime)s %(levelname)s:%(message)s')
     if not flag:
         if dirflag:
-             os.chdir(dirname)
-             file = open('run.log', "w")
-             file.write(str + '\n')
-             file.close()
+            os.chdir(unscrambled)
+            logging.debug(str + '\n')
+            file.close()
         else:
-            file = open("run.log", "w")
-            file.write(str + '\n')
+            logging.debug(str + '\n')
             file.close()
     else:
         if dirflag:
-            os.chdir(dirname)
+            os.chdir(unscrambled)
             file = open("error.log", "w")
             file.write(str)
             #file.write(error_text)
@@ -33,9 +33,9 @@ def scraper_log(str, error_text="", flag=False, dirflag = 0, dirname =""):
             #file.write(error_text)
             file.close()
 
-def phone_numbers(str,  dirname, dirflag = 0):
+def phone_numbers(str,  unscrambled, dirflag = 0):
         if dirflag:
-            os.chdir(dirname)
+            os.chdir(unscrambled)
             filename = "phone_numbers.csv"
             pfile = open(filename, "w")
             writer = csv.writer(pfile)
@@ -47,11 +47,10 @@ def phone_numbers(str,  dirname, dirflag = 0):
             writer.writerow([str])
             pfile.close()
 
-def timestamper_log(str, dirflag = 0):
+def timestamper_log(str, unscrambled, dirflag = 0):
     if dirflag:
-        file = open("timestamps.log", "w")
-        file.write(str)
-        file.write("\n")
+        os.chdir(unscrambled)
+        logging.debug(str + '\n')
         file.close()
     else:
         file = open("timestamps.log", "w")
