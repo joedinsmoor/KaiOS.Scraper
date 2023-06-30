@@ -3,6 +3,7 @@ import sqlite3
 import string
 import sys
 import glob
+from time import sleep
 #import pandas
 #from jinja2 import Environment
 from os.path import exists
@@ -82,7 +83,13 @@ elif (menu == '2'):
     n = len(dir_list)
     for i in range(n):
         if(dir_list[i].endswith(".sqlite")):
-            dirScraper(dir_list[i], dirflag, tablename)
+            if(dir_list[i].endswith(".sqlite-wal")):
+                 pass
+            elif(dir_list[i].endswith(".sqlite-shm")):
+                 pass
+            else:
+                sleep(0.5)
+                dirScraper(dir_list[i], dirflag, tablename)
         else:
             i+=1
 
