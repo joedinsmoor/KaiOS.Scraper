@@ -53,7 +53,8 @@ def dirScraper(filename, dirflag, tablename):
         print("Failed to read data from sqlite table: Error:", error)
         error_text = "Failed to read data from sqlite table: Error:".format(str(error)) 
         log_error = 1
-        scraper_log(error_text, log_error)
+        flag = True
+        scraper_log(error_text, log_error, flag)
 
     finally:
         if conn:
