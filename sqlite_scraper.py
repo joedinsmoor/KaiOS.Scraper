@@ -68,11 +68,11 @@ if (menu == '1'):
     finally:
         if conn:
             conn.close()
-            print("\nSQLite Connection Closed. \nLog saved in 'run.log'\n")
+            print("\nSQLite Connection Closed. \n\nLog saved in 'run.log'")
             if exists("phone_numbers.csv"):
-                    print("Phone Numbers Found! Output in 'phone_numbers.csv'")
+                    print("Phone Numbers Found! Output in 'phone_numbers.csv'\n")
             if exists("timestamps.log"):
-                    print("Timestamps Gathered! Timestamps in 'timestamps.log'")
+                    print("Timestamps Gathered! Timestamps in 'timestamps.log'\n")
 
 elif (menu == '2'):
     #import all filenames to list, parse all dbs in parallel using Threading
