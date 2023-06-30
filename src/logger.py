@@ -6,30 +6,37 @@
 
 
 import csv
+import os
 
 
-def scraper_log(str, error_text='', flag=False, dirflag = 0, dirname =""):
+def scraper_log(str, error_text="", flag=False, dirflag = 0, dirname =""):
     if not flag:
         if dirflag:
-             filename = dirname + "_run.log"
-             file = open(filename, "w")
-             file.write("\n")
-             file.write(str)
+             os.chdir(dirname)
+             file = open('run.log', "w")
+             file.write(str + '\n')
              file.close()
         else:
             file = open("run.log", "w")
-            file.write("\n")
-            file.write(str)
+            file.write(str + '\n')
             file.close()
     else:
-        file = open("error.log", "w")
-        file.write(str)
-        #file.write(error_text)
-        file.close()
+        if dirflag:
+            os.chdir(dirname)
+            file = open("error.log", "w")
+            file.write(str)
+            #file.write(error_text)
+            file.close()
+        else:
+            file = open("error.log", "w")
+            file.write(str)
+           # file.write(error_text)
+            file.close()
 
 def phone_numbers(str,  dirname, dirflag = 0):
         if dirflag:
-            filename = dirname + "_phone_numbers.csv"
+            os.chdir(dirname)
+            filename = "phone_numbers.csv"
             pfile = open(filename, "w")
             writer = csv.writer(pfile)
             writer.writerow([str])
