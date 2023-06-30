@@ -51,9 +51,13 @@ if (menu == '1'):
         #Set character validity for decoding
         valid_chars = string.printable
         image = handle_photo(cur)
+        sleep(0.1)
         #Decode and remove extraneous hex data, leaving only ascii characters
         decode(cur)
+        sleep(0.1)
         time_scrape(cur)
+        sleep(0.1)
+        
 
     except sqlite3.Error as error:
         print("Failed to read data from sqlite table: Error:", error)
