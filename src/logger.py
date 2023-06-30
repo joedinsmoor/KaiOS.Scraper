@@ -16,10 +16,10 @@ def scraper_log(str, unscrambled, error_text="", flag=False, dirflag = 0):
         if dirflag:
             os.chdir(unscrambled)
             logging.debug(str + '\n')
-            file.close()
+            #file.close()
         else:
             logging.debug(str + '\n')
-            file.close()
+            #file.close()
     else:
         if dirflag:
             os.chdir(unscrambled)
@@ -51,7 +51,7 @@ def timestamper_log(str, unscrambled, dirflag = 0):
     if dirflag:
         os.chdir(unscrambled)
         logging.debug(str + '\n')
-        file.close()
+        #file.close()
     else:
         file = open("timestamps.log", "w")
         file.write(str)
