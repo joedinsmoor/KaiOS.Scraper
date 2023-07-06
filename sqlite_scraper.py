@@ -83,6 +83,7 @@ elif (menu == '2'):
     for i in range(n):
         if(dir_list[i].endswith(".sqlite")):
             dirScraper(dir_list[i], dirflag, tablename)
+            os.chdir(dir)
         else:
             i+=1
 

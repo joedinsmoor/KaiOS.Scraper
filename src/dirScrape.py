@@ -27,11 +27,15 @@ def dirScraper(filename, dirflag, tablename):
     dirflag = 1
     p = Path(filename)
     unscrambled = unscramble(p.name)
-    os.makedirs(unscrambled) #Create directory for current sqlite DB
+    if not os.path.isdir(unscrambled):
+        os.makedirs(unscrambled) #Create directory for current sqlite DB
+    else:
+         pass
 
 
     conn = open_sqlite_db_readonly(filename)
     cur = conn.cursor()
+    os.chdir(unscrambled)
     #Navigate to appropriate table and row
     try:
         if tablename == "":
