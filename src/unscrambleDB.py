@@ -21,7 +21,7 @@ def extract(text) -> str:
     " Extract main encoded name (without numbers or file extension) & print "
     text = re.split('\.', text)[0]
     text = text.lstrip(digits)
-    print("Extracted name: " + text) 
+    print("\n\nExtracted name: " + text) 
     return text
 
 def unscramble(text: str) -> str:
@@ -45,7 +45,7 @@ def unscramble(text: str) -> str:
     while (newText.__contains__("%2F")):
         newText = newText.replace("%2F", "/")
 
-    print("Decoded database name: " + newText)
+    print("Decoded database name: " + newText + "\n\n")
     return newText 
 
 if __name__ == '__main__':
