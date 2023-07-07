@@ -8,7 +8,9 @@
 import re
 import sqlite3
 import string
-from logger import *
+import sys
+sys.path.append('./src')
+from src.logger import *
 from string import digits
 
 '''

@@ -33,8 +33,10 @@ def scraper_log(str, unscrambled, error_text="", flag=False, dirflag = 0):
             #file.write(error_text)
             file.close()
 
-def phone_numbers(str,  unscrambled, dirflag = 0):
+def phone_numbers(str, unscrambled, dirflag = 0):
         if dirflag:
+            if not os.path.isdir(unscrambled):
+                os.makedirs(unscrambled)
             os.chdir(unscrambled)
             filename = "phone_numbers.csv"
             pfile = open(filename, "w")
