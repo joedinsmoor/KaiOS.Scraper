@@ -98,9 +98,6 @@ elif (menu == '2'):
                 os.chdir(dir)
         else:
             i+=1
-
-    
-
 else:
     print("------------menu option invalid------------\n")
     exit()
