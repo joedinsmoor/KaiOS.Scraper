@@ -4,3 +4,5 @@ extracted_image.jpg
 __init__.py
 __pycache__
 error.log
+src/__pycache__/
+
