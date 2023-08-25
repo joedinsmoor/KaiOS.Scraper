@@ -4,14 +4,9 @@ extracted_image.jpg
 __init__.py
 __pycache__
 error.log
-<<<<<<< HEAD
-src/__pycache__/*.pyc
-
-=======
 *.pyc
 src/__pycache__/__init__.cpython-311.pyc
 src/__pycache__/decoder.cpython-311.pyc
 src/__pycache__/image_handler.cpython-311.pyc
 src/__pycache__/importer.cpython-311.pyc
 src/__pycache__/logger.cpython-311.pyc
->>>>>>> 4cfc608275c32d3762ade6f0fb23d1d5204ac6b8
