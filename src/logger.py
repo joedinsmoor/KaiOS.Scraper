@@ -36,7 +36,8 @@ def scraper_log(str, unscrambled, error_text="", flag=False, dirflag = 0):
 def phone_numbers(str, unscrambled, dirflag = 0):
         if dirflag:
             if not os.path.isdir(unscrambled):
-                os.makedirs(unscrambled)
+                result = ''.join(i for i in unscrambled if not i.isdigit())
+                os.makedirs(result)
             os.chdir(unscrambled)
             filename = "phone_numbers.csv"
             pfile = open(filename, "w")
