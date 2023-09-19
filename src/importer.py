@@ -6,7 +6,7 @@ def input_file():
     return filename
 
 def open_sqlite_db_readonly(path):
-    '''Opens an sqlite db in read-only mode, so original db (and -wal/journal are intact)'''
+    '''Opens a sqlite db in read-only mode, so original db (and -wal/journal are intact)'''
     if is_platform_windows():
         if path.startswith('\\\\?\\UNC\\'):  # UNC long path
             path = "%5C%5C%3F%5C" + path[4:]

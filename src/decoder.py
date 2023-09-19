@@ -32,6 +32,7 @@ def decode(cur, dirflag = 0, unscrambled = ''):
 
     for i in re.findall(r'[\+\(]?[1-9][0-9 .\-(\)]{8,}[0-9]', print_me):
       phone_numbers(i, dirflag, unscrambled)
+      timestamper_log(i)
 
     scraper_log(print_me, dirflag, unscrambled) #Log unscrambled output for later use in plaintext
 
