@@ -7,5 +7,5 @@
 
 `#Written by: "Your name"`
 
-`#github: "Your github handle"`\
+`#github: "Your github handle"`
 `-----------------------------------------------------------------`
