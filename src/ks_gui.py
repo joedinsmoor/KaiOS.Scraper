@@ -25,7 +25,26 @@ def load_gui():
 
 def main_gui(option):
 
+    layout = layout_picker(option)
+
+    window = sg.Window('KaiOS Scraper', layout)
+    while True:
+        event, values = window.read(timeout=1)
+        if event == 'Ok':
+            window.close()
+            return values
+        elif event == 'Cancel':
+            window.close()
+        break
+    window.close()
+
+
+def layout_picker(option):
+
     sg.theme('Dark Blue 3')
+
+    if option == '':
+        option = load_gui()
 
     if option == '1':
         layout = [
@@ -39,14 +58,4 @@ def main_gui(option):
             [sg.Text('Enter Directory to Parse: '), sg.InputText()],
             [sg.Button('Ok'), sg.Button('Cancel')]
         ]
-
-    window = sg.Window('KaiOS Scraper', layout)
-    while True:
-        event, values = window.read()
-        if event == 'Ok':
-            window.close()
-            return values
-        elif event == 'Cancel':
-            window.close()
-        break
-    window.close()
+    return layout
