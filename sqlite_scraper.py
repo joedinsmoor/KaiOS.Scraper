@@ -16,19 +16,21 @@ from src.decoder import decode
 from src.logger import scraper_log
 from src.timestamper import time_scrape
 from src.dirScrape import *
+from src.ks_gui import *
 
 
-menu = input("Enter 1 to scrape a single db, Enter 2 to scrape a full directory of sqlite dbs: ")
 
 fileList = []
 n = 0
 
+menu = load_gui()
+
 if (menu == '1'):
     #Import extracted SQLite db
-    filename = input_file()
+    filename = main_gui('1')
     while filename == "":
         print("No file entered.\nPress ctrl+c to exit.")
-        filename = input_file()
+        filename = main_gui(1)
 
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
@@ -80,7 +82,7 @@ elif (menu == '2'):
 
     dirflag = 1
 
-    dir = input("enter directory to scrape: ")
+    dir = main_gui('2')
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
     os.chdir(dir)
     dir_list = os.listdir(dir)
