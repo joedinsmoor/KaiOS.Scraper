@@ -8,16 +8,15 @@
 import datetime
 import time
 import os
-import requests
 import re
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
 from tkinter import *
 
 win = Tk()
 win.geometry("1280x720")
 
 
-geo = Nominatim(user_agent="sqlite_scraper")
+#geo = Nominatim(user_agent="sqlite_scraper")
 
 
 def geolocation(str):

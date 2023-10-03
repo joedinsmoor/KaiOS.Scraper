@@ -27,10 +27,10 @@ menu = load_gui()
 
 if (menu == '1'):
     #Import extracted SQLite db
-    filename = main_gui('1')
+    filename = file()
     while filename == "":
         print("No file entered.\nPress ctrl+c to exit.")
-        filename = main_gui(1)
+        filename = file()
 
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
 
@@ -82,7 +82,7 @@ elif (menu == '2'):
 
     dirflag = 1
 
-    dir = main_gui('2')
+    dir = path()
     tablename = input("Enter name of table to parse (defaults to 'object_data if nothing is entered): ")
     os.chdir(dir)
     dir_list = os.listdir(dir)

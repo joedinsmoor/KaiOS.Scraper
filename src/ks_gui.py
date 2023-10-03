@@ -8,54 +8,56 @@ def load_gui():
     layout = [
         [sg.Text('KaiOS Scraper')],
         [sg.Text('Are you parsing a directory or a file? (e.g. .zip, .bin, .upg)')],
-        [sg.Button('Directory'), sg.Button('File')]
+        [sg.Button('Directory', tooltip='e.g. Users/Username/Downloads/extraction/'), sg.Button('File',tooltip='e.g. Users/Username/Downloads/extraction.zip' ), sg.Button('Cancel')]
     ]
 
-    window = sg.Window('KaiOS Scraper', layout)
+    window = sg.Window('KaiOS Scraper', layout, alpha_channel=0.7)
     while True:
         event, values = window.read()
         if event == 'Directory':
             window.close()
+            path()
             return '2'
         elif event == 'File':
             window.close()
+            file()
             return '1'
+        elif event == 'Cancel':
+            exit()
         break
     window.close()
 
-def main_gui(option):
 
-    layout = layout_picker(option)
-
-    window = sg.Window('KaiOS Scraper', layout)
+def file():
+    layout = [
+            [sg.Text('KaiOS Scraper')],
+            [sg.Text('Enter Filename to parse (e.g extraction.bin, extraction.zip): '), sg.InputText(focus=True, tooltip='Enter path to file being parsed, e.g. (/Users/Username/Downloads/extraction.zip)')],
+            [sg.Button('Ok'), sg.Button('Cancel')]
+        ]
+    window = sg.Window('KaiOS Scraper', layout, alpha_channel=0.7)
     while True:
         event, values = window.read(timeout=1)
         if event == 'Ok':
             window.close()
             return values
-        elif event == 'Cancel':
-            window.close()
+        elif event =='Cancel':
+            exit()
         break
-    window.close()
+    window.close
 
-
-def layout_picker(option):
-
-    sg.theme('Dark Blue 3')
-
-    if option == '':
-        option = load_gui()
-
-    if option == '1':
-        layout = [
-            [sg.Text('KaiOS Scraper')],
-            [sg.Text('Enter Filename to parse (e.g extraction.bin, extraction.zip): '), sg.InputText()],
-            [sg.Button('Ok'), sg.Button('Cancel')]
-        ]
-    elif option == '2':
-        layout = [
+def path():
+    layout = [
             [sg.Text('KaiOS Scraper')],
             [sg.Text('Enter Directory to Parse: '), sg.InputText()],
             [sg.Button('Ok'), sg.Button('Cancel')]
         ]
-    return layout
+    window = sg.Window('KaiOS Scraper', layout, alpha_channel=0.7)
+    while True:
+        event, values = window.read(timeout=1)
+        if event == 'Ok':
+            window.close()
+            return values
+        elif event =='Cancel':
+            exit()
+        break
+    window.close
