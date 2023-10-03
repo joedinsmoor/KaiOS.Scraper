@@ -5,8 +5,11 @@ import PySimpleGUI as sg
 def load_gui():
     '''
     - Enables selection between directory parsing and file parsing, returns menu options for sqlite_scraper menu method. 
+    - Arguments: 
+      - Selection -> button event
+      - Returns -> method of parsing, dir/file
     '''
-    sg.theme('Dark Blue 3')
+    sg.theme('Dark Blue 2')
 
     layout = [
         [sg.Text('KaiOS Scraper')],
@@ -21,12 +24,10 @@ def load_gui():
             window.close()
             path()
             return "2"
-            break
         elif event == 'File':
             window.close()
             file()
             return "1"
-            break
         elif event == 'Cancel':
             exit()
         break
@@ -34,6 +35,12 @@ def load_gui():
 
 
 def file():
+    '''
+    - Enables input of filename and path for file parsing
+    - Arguments: 
+      - User Input -> values
+      - Returns -> values
+    '''
     layout = [
             [sg.Text('KaiOS Scraper')],
             [sg.Text('Enter Filename to parse (e.g extraction.bin, extraction.zip): '), sg.InputText(focus=True, tooltip='Enter path to file being parsed, e.g. (/Users/Username/Downloads/extraction.zip)')],
@@ -51,6 +58,12 @@ def file():
     window.close
 
 def path():
+    '''
+    - Enables input of directory path for directory parsing
+    - Arguments: 
+      - User input -> pathval
+      - Returns -> values
+    '''
     layout = [
             [sg.Text('KaiOS Scraper')],
             [sg.Text('Enter Directory to Parse: '), sg.InputText()],
@@ -58,8 +71,15 @@ def path():
         ]
     window = sg.Window('KaiOS Scraper', layout, alpha_channel=0.7)
     while True:
-        event, values = window.read(timeout=1)
-        if event == 'Ok':
+        try:
+            event, values = window.read(timeout=10000)
+        except:
+            pass
+        finally:
+            pass
+        if callable(event):
+            event()
+        elif event == 'Ok':
             window.close()
             return values
         elif event =='Cancel':
