@@ -3,6 +3,9 @@ import PySimpleGUI as sg
 
 
 def load_gui():
+    '''
+    - Enables selection between directory parsing and file parsing, returns menu options for sqlite_scraper menu method. 
+    '''
     sg.theme('Dark Blue 3')
 
     layout = [
@@ -17,11 +20,13 @@ def load_gui():
         if event == 'Directory':
             window.close()
             path()
-            return '2'
+            return "2"
+            break
         elif event == 'File':
             window.close()
             file()
-            return '1'
+            return "1"
+            break
         elif event == 'Cancel':
             exit()
         break
