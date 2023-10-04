@@ -19,7 +19,7 @@ numpy==1.23.5
 opencv-python==4.6.0.66
 packaging==23.1
 pandas==2.0.2
-Pillow==9.5.0
+Pillow==10.0.1
 pluggy==1.0.0
 pyodbc==4.0.35
 PySimpleGUI==4.60.5
