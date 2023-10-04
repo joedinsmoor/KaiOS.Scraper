@@ -35,4 +35,4 @@ soupsieve==2.4.1
 tk==0.1.0
 tomli==2.0.1
 tzdata==2023.3
-urllib3==1.26.15
+urllib3==1.26.17
