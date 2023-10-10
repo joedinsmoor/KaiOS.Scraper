@@ -25,3 +25,6 @@ src/__pycache__/logger.cpython-310.pyc
 src/__pycache__/logger.cpython-311.pyc
 src/__pycache__/timestamper.cpython-310.pyc
 src/__pycache__/unscrambleDB.cpython-310.pyc
+
+/tests/target
+*.lock
