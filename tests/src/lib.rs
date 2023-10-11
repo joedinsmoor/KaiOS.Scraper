@@ -56,7 +56,7 @@ mod tests{
     fn sms_test(){ // Run sqlite_scraper against known db
         let smsfile = "phone_numbers.csv";
         let testfile = "226660312ssm.sqlite";
-        lut mut cmd = Command::new("python3");
+        let mut cmd = Command::new("python3");
         cmd.arg("sqlite_scraper.py");
         assert(smsfile.exists());
     }
