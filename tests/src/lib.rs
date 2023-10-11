@@ -58,6 +58,6 @@ mod tests{
         let testfile = "testData/226660312ssm.sqlite";
         let mut cmd = Command::new("python3");
         cmd.arg("sqlite_scraper.py");
-        assert(smsfile.exists());
+        assert!(Path::new(smsfile).exists());
     }
 }
