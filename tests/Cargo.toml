@@ -6,4 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+assert_cmd = "2.0.12"
+command = "0.0.0"
+error = "0.1.9"
 execute = "0.2.12"
+predicates = "3.0.4"
