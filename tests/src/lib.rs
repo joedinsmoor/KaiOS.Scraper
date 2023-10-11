@@ -13,7 +13,7 @@ mod tests{
         assert_eq!(result, 4);
     }
     #[test]
-    fn test_install_python_dependencies() {
+    fn KSdependencies() {
         // Create a Command to run the 'pip' command to install from requirements.txt
         let current_dir = match env::current_dir() {
             Ok(dir) => dir,
