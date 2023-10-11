@@ -5,6 +5,8 @@ mod tests{
     //use std::error::Error;
     use std::env;
     use std::io::ErrorKind;
+    use std::path::Path;
+
     #[test]
     fn test_init(){
         let result = 2 + 2;
@@ -52,7 +54,10 @@ mod tests{
     }
     #[test]
     fn sms_test(){ // Run sqlite_scraper against known db
-        let result = 1 + 1;
-        assert_eq!(result, 2);
+        let smsfile = "phone_numbers.csv";
+        let testfile = "226660312ssm.sqlite";
+        lut mut cmd = Command::new("python3");
+        cmd.arg("sqlite_scraper.py");
+        assert(smsfile.exists());
     }
 }
