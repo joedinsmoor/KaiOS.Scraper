@@ -15,6 +15,7 @@ mod tests{
     #[test]
     fn KSdependencies() {
         // Create a Command to run the 'pip' command to install from requirements.txt
+        println!("Testing dependency installation, if this fails, its because it needs super user priveleges on windows. Can't do much about that :)");
         let current_dir = match env::current_dir() {
             Ok(dir) => dir,
             Err(e) => panic!("Failed to get the current working directory: {}", e),
@@ -54,6 +55,7 @@ mod tests{
     }
     #[test]
     fn sms_test(){ // Run sqlite_scraper against known db
+        println!("testing different KS functions individually against test data found in /testData/");
         let smsfile = "phone_numbers.csv";
         let testfile = "testData/226660312ssm.sqlite";
         let mut cmd = Command::new("python3");
