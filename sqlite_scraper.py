@@ -3,8 +3,6 @@ import sqlite3
 import string
 import sys
 from time import sleep
-#import pandas
-#from jinja2 import Environment
 from os.path import exists
 from pathlib import Path
 sys.path.append('./src')
