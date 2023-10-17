@@ -2,7 +2,6 @@ import os
 import sqlite3
 import string
 import sys
-import glob
 from time import sleep
 #import pandas
 #from jinja2 import Environment

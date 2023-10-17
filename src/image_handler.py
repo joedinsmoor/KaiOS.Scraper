@@ -6,8 +6,6 @@
 
 
 #from PIL import Image
-import io
-import sqlite3
 import os
 
 
