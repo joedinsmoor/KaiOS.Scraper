@@ -13,7 +13,7 @@ mod tests{
         assert_eq!(result, 4);
     }
     #[test]
-    fn KSdependencies() {
+    fn ksdependencies() {
         // Create a Command to run the 'pip' command to install from requirements.txt
         println!("Testing dependency installation, if this fails, its because it needs super user priveleges on windows. Can't do much about that :)");
         let current_dir = match env::current_dir() {
