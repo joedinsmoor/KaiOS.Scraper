@@ -6,8 +6,6 @@
 
 
 import re
-import sqlite3
-import string
 import sys
 sys.path.append('./src')
 from src.logger import *
