@@ -12,7 +12,7 @@ import os
 
 
 def handle_photo(cur, unscrambled = '', dirflag = 0):
-    #Carve any images that exist in SQLite db - nonfunctional as of 9/11
+    #Carve any images that exist in SQLite db - nonfunctional as of 9/23
     cur.execute("SELECT data FROM object_data")
     res = cur.fetchall()
     jpg_byte_start = b'\xff\xd8'

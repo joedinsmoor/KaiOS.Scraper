@@ -1,3 +1,9 @@
+# -----------------------------------------------------------------
+# GUI backend for KaiOS scraper, development underway
+# Written by: Joe Dinsmoor
+# github: @joedinsmoor
+# -----------------------------------------------------------------
+
 import PySimpleGUI as sg
 
 
