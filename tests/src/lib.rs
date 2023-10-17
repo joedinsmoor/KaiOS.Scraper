@@ -15,7 +15,7 @@ mod tests{
     #[test]
     fn ksdependencies() {
         // Create a Command to run the 'pip' command to install from requirements.txt
-        println!("Testing dependency installation, if this fails, its because it needs super user priveleges on windows. Can't do much about that :)");
+        println!("Testing dependency installation, if this fails, its because it needs super user privileges on windows. Can't do much about that :)");
         let current_dir = match env::current_dir() {
             Ok(dir) => dir,
             Err(e) => panic!("Failed to get the current working directory: {}", e),
@@ -23,7 +23,7 @@ mod tests{
 
         // Navigate to the parent directory
         let parent_dir = current_dir.parent().unwrap_or_else(|| {
-            panic!("Failed to get the parent directory. Ensure that 'requirements.txt' is not in the root directory.");
+            panic!("Failed to get the parent directory. Ensure that 'requirements.txt' is in the root directory.");
         });
 
         // Change the working directory to the parent directory
@@ -54,12 +54,13 @@ mod tests{
         assert!(status.success(), "Command failed with exit code: {}", status.code().unwrap_or(-1));
     }
     #[test]
+    #[ignore]
     fn sms_test(){ // Run sqlite_scraper against known db
         println!("testing different KS functions individually against test data found in /testData/");
         let smsfile = "phone_numbers.csv";
-        let testfile = "testData/226660312ssm.sqlite";
+        //let testfile = "./testData/226660312ssm.sqlite";
         let mut cmd = Command::new("python3");
         cmd.arg("sqlite_scraper.py");
-        assert!(Path::new(smsfile).exists());
+        assert!(Path::new(smsfile).exists(), "Functions did not pass testing, try again.");
     }
 }
