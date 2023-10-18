@@ -31,7 +31,7 @@ mod tests{
             panic!("Failed to change working directory to the parent directory: {}", e);
         }
 
-        let mut cmd = Command::new("pip");
+        let mut cmd = Command::new("pip3");
 
         // Specify the command arguments to install from requirements.txt
         cmd.arg("install");
