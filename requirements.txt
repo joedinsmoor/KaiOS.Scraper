@@ -8,7 +8,7 @@ asgiref==3.7.2
 asn1crypto==1.5.1
 async-timeout==4.0.3
 attrs==23.1.0
-autobahn==23.6.2
+autobahn==23.1.2
 Automat==22.10.0
 beautifulsoup4==4.12.2
 billiard==4.1.0
