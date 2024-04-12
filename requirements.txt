@@ -71,7 +71,7 @@ httpx==0.25.2
 huggingface-hub==0.20.1
 humanize==4.8.0
 hyperlink==21.0.0
-idna==3.4
+idna==3.7
 importlib-metadata==7.0.0
 incremental==22.10.0
 inflection==0.5.1
