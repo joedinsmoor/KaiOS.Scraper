@@ -71,7 +71,7 @@ httpx==0.25.2
 huggingface-hub==0.20.1
 humanize==4.8.0
 hyperlink==21.0.0
-idna==3.4
+idna==3.7
 importlib-metadata==7.0.0
 incremental==22.10.0
 inflection==0.5.1
@@ -118,7 +118,7 @@ pycparser==2.21
 pydantic==2.4.0
 pydantic_core==2.6.3
 PyJWT==2.8.0
-pymongo==4.6.1
+pymongo==4.6.3
 pyOpenSSL==23.2.0
 pytest==7.4.0
 pytest-django==4.5.2
@@ -144,7 +144,7 @@ soupsieve==2.4.1
 spacy==3.6.1
 spacy-legacy==3.0.12
 spacy-loggers==1.0.4
-sqlparse==0.4.4
+sqlparse==0.5.0
 srsly==2.4.7
 statistics==1.0.3.5
 textblob==0.17.1
