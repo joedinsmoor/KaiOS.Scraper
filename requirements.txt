@@ -154,7 +154,7 @@ tiktoken==0.5.1
 tokenizers==0.15.0
 tomlkit==0.12.3
 tornado==6.3.3
-tqdm==4.66.1
+tqdm==4.66.3
 Twisted==23.10.0rc1
 txaio==23.1.1
 typer==0.9.0
