@@ -44,7 +44,7 @@ django-celery-beat
 django-environ
 django-rest-swagger
 django-restframework
-django-timezone-field==6.0
+django-timezone-field
 djangorestframework
 dnspython
 docutils
@@ -67,7 +67,7 @@ httpcore
 httpx
 humanize
 hyperlink
-idna==3.4
+idna
 importlib-metadata
 incremental
 inflection
@@ -93,12 +93,12 @@ openai
 openapi-codec
 opensearch-py
 oracledb
-packaging==23.1
+packaging
 pathy
 pika
 platformdirs
 pluggy
-ply==3.11
+ply
 preshed
 prometheus-client
 prompt-toolkit
@@ -109,7 +109,7 @@ psycopg2-binary
 pyahocorasick
 pyasn1
 pyasn1-modules
-pycparser==2.21
+pycparser
 pydantic
 pydantic_core
 PyJWT
@@ -120,14 +120,14 @@ pytest-django
 python-crontab
 python-dateutil
 python-dotenv
-pytz==2023.3
+pytz
 PyYAML
 readability-lxml
 redis
 regex
 requests
 responses
-rsa==4.9
+rsa
 service-identity
 simplejson
 six
@@ -155,7 +155,7 @@ txaio
 typer
 types-PyYAML.11
 typing_extensions
-tzdata==2023.3
+tzdata
 uritemplate
 urllib3
 vine
@@ -166,5 +166,5 @@ whitenoise
 xmltodict
 yarl
 zipp
-zope.interface==6.0
+zope.interface
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
